@@ -1,5 +1,6 @@
 ---
 import Layout from "@layouts/Layout.astro";
+import Prose from '@components/Prose.astro';
 import Header from "@components/Header.astro";
 import Footer from "@components/Footer.astro";
 import Tag from "@components/Tag.astro";
@@ -81,13 +82,15 @@ const nextPost =
     <Datetime
       pubDatetime={pubDatetime}
       modDatetime={modDatetime}
-      size="lg"
+      size="sm"
       className="my-2"
       editPost={editPost}
       postId={post.id}
     />
-    <article id="article" class="prose mx-auto mt-8 max-w-3xl">
-      <Content />
+    <article id="article" class="prose mx-auto max-w-3xl mt-8 ">
+      <Prose>
+        <Content />
+      </Prose>
     </article>
 
     <ul class="my-8">
@@ -109,7 +112,6 @@ const nextPost =
         <span>Back to Top</span>
       </button>
 
-      <ShareLinks />
     </div>
 
     <hr class="my-6 border-dashed" />
@@ -186,7 +188,7 @@ const nextPost =
     @apply mx-auto w-full max-w-3xl px-4 pb-12;
   }
   .post-title {
-    @apply text-2xl font-semibold text-skin-accent;
+    @apply text-3xl font-semibold text-skin-accent;
   }
 </style>
 

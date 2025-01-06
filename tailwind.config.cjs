@@ -61,11 +61,26 @@ module.exports = {
       },
       fontFamily: {
         mono: ["IBM Plex Mono", "monospace"],
+        Verdana: ["Verdana", "sans-serif"],
+        Arial: ["Arial", "sans-serif"],
       },
 
       typography: {
         DEFAULT: {
           css: {
+            details: {
+              marginTop: "1rem",
+              marginBottom: "1rem",
+              textAlign: "left",
+            },
+            // "details .math, details .katex": {
+            //   display: block,
+            //   textAlign: center, /* 居中公式 */
+            //   // margin: 0, /* 保证居中 */
+            // },
+            "details > *": {
+              textAlign: "inherit",
+            },
             pre: {
               color: false,
             },
