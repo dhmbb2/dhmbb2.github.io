@@ -14,7 +14,7 @@ const posts = await getCollection("blog");
 
 const sortedPosts = getSortedPosts(posts);
 const featuredPosts = sortedPosts.filter(({ data }) => data.featured);
-const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
+const recentPosts = sortedPosts.filter(({ data }) => data.featured);
 
 const socialCount = SOCIALS.filter(social => social.active).length;
 ---
@@ -22,7 +22,7 @@ const socialCount = SOCIALS.filter(social => social.active).length;
 <Layout>
   <Header />
   <main id="main-content", class = "mx-auto w-full max-w-3xl">
-    <section id="hero">y
+    <section id="hero">
       <h1> About me</h1>
       <!-- <a
         target="_blank"
@@ -115,10 +115,10 @@ const socialCount = SOCIALS.filter(social => social.active).length;
           ></path>
         </svg>
       </LinkButton>
-    </div>
-  </main> -->
+    </div> -->
+  </main>
 
-  <!-- <Footer /> -->
+  <Footer />
 </Layout>
 
 <style>
